@@ -18,7 +18,6 @@
 	let activeQuestion = 0;
 	let quiz = getQuiz();
 	let active = false;
-   let afterFinish = false;
    let numberOfQuestions;
 	$: hideStart = true;
 	$: showQuiz = false;
@@ -85,8 +84,8 @@
 
 	{#if (showQuiz = true)}
 		{#await quiz}
-         {#if !hideStart && !afterFinish}
-			<img src={loadingGif} alt="loading gif"/>
+         {#if !hideStart}
+			<img class="loadingImg" src={loadingGif} alt="loading gif"/>
          {/if}
 		{:then data}
 			{#each data.results as question, index}
@@ -149,7 +148,7 @@
             
             <div class="stat endButtons">
                   <button class="btn btn-active btn-primary btn-sm" on:click={() => window.location.reload()}>Options</button>
-                  <button class="btn btn-active btn-primary btn-sm" on:click={ startQuiz} on:click={() => (afterFinish = !afterFinish)}>Restart</button>
+                  <button class="btn btn-active btn-primary btn-sm" on:click={ startQuiz}>Restart</button>
             </div>  
           </div>
           <div class="font-title mb-2 font-medium text-lg footerText">Made with</div>
@@ -163,6 +162,9 @@
 </section>
 
 <style>
+   .loadingImg {
+      position: absolute;
+   }
    .footerText {
       margin-top: 2em;
       margin-bottom: .5em;
