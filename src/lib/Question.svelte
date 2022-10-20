@@ -197,7 +197,6 @@
 	@media only screen and (max-width: 465px){
    .wrapper {
 		padding: 0;
-      overflow: auto;
 	}
 	.forQuestion {
 		color: hsl(var(--s));
