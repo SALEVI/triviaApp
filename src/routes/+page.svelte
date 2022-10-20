@@ -148,7 +148,7 @@
             </div>     
             
             <div class="stat endButtons">
-                  <button class="btn btn-active btn-primary btn-sm" on:click={(afterFinish = true)} on:click={() => window.location.reload()}>Options</button>
+                  <button class="btn btn-active btn-primary btn-sm" on:click={() => window.location.reload()} on:click={() => (afterFinish = !afterFinish)}>Options</button>
                   <button class="btn btn-active btn-primary btn-sm" on:click={ startQuiz}>Restart</button>
             </div>  
           </div>
