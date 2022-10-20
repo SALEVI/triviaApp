@@ -1,4 +1,10 @@
 <script>
+   import badGif from '$lib/images/bad.gif';
+   import excelentGif from '$lib/images/excelent.gif';
+   import fairGif from '$lib/images/fair.gif';
+   import goodGif from '$lib/images/good.gif';
+   import OpendbLogo from '$lib/images/opendblogo.png';
+   import poorGif from '$lib/images/poor.gif';
    import Options from '$lib/Options/Options.svelte';
    import Question from '$lib/Question.svelte';
    import { fade, fly } from 'svelte/transition';
@@ -64,7 +70,7 @@
 
       <div class="font-title mb-2 font-medium text-lg footerText">Made with</div>
       <span class="footer flex flex-row justify-center items-center">
-         <img class="w-32 h-32 opendtdb" src="src\lib\images\opendblogo.png" alt="opendtdb logo" />
+         <img class="w-32 h-32 opendtdb" src={OpendbLogo} alt="opendtdb logo" />
          <span class="font-title mb-2 text-4xl font-extrabold sm:text-4xl lg:text-4xl">daisyUI</span>
       </span>
 	{/if}
@@ -103,19 +109,19 @@
 
          <div class="endImg">
             {#if (scorePercentage>= 0) && (scorePercentage <20)} 
-            <img src="src\lib\images\bad.gif" alt="Simpsons all judges rate zero" />
+            <img src={badGif} alt="Simpsons all judges rate zero" />
             {/if}
             {#if (scorePercentage>= 20) && (scorePercentage <40)} 
-            <img src="src\lib\images\poor.gif" alt="Dark Souls get good meme" />
+            <img src={poorGif} alt="Dark Souls get good meme" />
             {/if}
             {#if (scorePercentage>= 40) && (scorePercentage <60)} 
-            <img src="src\lib\images\fair.gif" alt="Man saying it's not that bad" />
+            <img src={fairGif} alt="Man saying it's not that bad" />
             {/if}
             {#if (scorePercentage>= 60) && (scorePercentage <80)} 
-            <img src="src\lib\images\good.gif" alt="Leonardo DiCaprio clapping" />
+            <img src={goodGif} alt="Leonardo DiCaprio clapping" />
             {/if}
             {#if (scorePercentage>= 80) && (scorePercentage <=100)} 
-            <img src="src\lib\images\excelent.gif" alt="All judges rate ten" />
+            <img src={excelentGif} alt="All judges rate ten" />
             {/if}
          </div>
          <div class="stats shadow">
