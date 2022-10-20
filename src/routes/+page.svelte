@@ -148,8 +148,8 @@
             </div>     
             
             <div class="stat endButtons">
-                  <button class="btn btn-active btn-primary btn-sm" on:click={() => window.location.reload()} on:click={() => (afterFinish = !afterFinish)}>Options</button>
-                  <button class="btn btn-active btn-primary btn-sm" on:click={ startQuiz}>Restart</button>
+                  <button class="btn btn-active btn-primary btn-sm" on:click={() => window.location.reload()}>Options</button>
+                  <button class="btn btn-active btn-primary btn-sm" on:click={ startQuiz} on:click={() => (afterFinish = !afterFinish)}>Restart</button>
             </div>  
           </div>
           <div class="font-title mb-2 font-medium text-lg footerText">Made with</div>
