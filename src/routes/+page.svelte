@@ -310,6 +310,10 @@
      background: transparent;
      box-shadow: none;
    }
+   .wrapper {
+      justify-content: flex-end;
+      padding: 70vh 0.1em 30vh 0.1em;
+   }
 }
 
 @media only screen and (max-width: 765px) {
