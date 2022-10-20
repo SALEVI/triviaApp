@@ -158,7 +158,7 @@
 	section {
 		max-width: 90vw;
 		max-height: 100vh;
-		overflow: scroll;
+		overflow: auto;
 	}
 	progress {
 		width: 100%;
@@ -180,7 +180,7 @@
 		padding-left: 2em;
 		padding-right: 2em;
       padding: 3em;
-		overflow: scroll;
+		overflow: auto;
 		/* box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; */
 		/* backdrop-filter: blur(5px); */
 	}

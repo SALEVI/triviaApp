@@ -229,7 +229,7 @@
       max-width: 100vw;
       max-height: 100vh;
       padding: 50vh 1.5em;
-      overflow: scroll;
+      overflow: auto;
       /* backdrop-filter: blur(5px); */
    }
 
