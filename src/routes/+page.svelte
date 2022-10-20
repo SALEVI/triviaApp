@@ -320,6 +320,10 @@
       width: auto;
       height: auto;
    }
+
+   .wrapper {
+      overflow: auto;
+   }
 }
 
 @media only screen and (max-width: 765px) {
