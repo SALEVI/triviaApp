@@ -197,6 +197,7 @@
 	@media only screen and (max-width: 465px){
    .wrapper {
 		padding: 0;
+
 	}
 	.forQuestion {
 		color: hsl(var(--s));
