@@ -316,7 +316,8 @@
       right: auto;
       top: auto;
       bottom: auto;
-      scale: 80%;
+      width: auto;
+      height: auto;
    }
 }
 
