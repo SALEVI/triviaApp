@@ -85,7 +85,7 @@
 
 	{#if (showQuiz = true)}
 		{#await quiz}
-         {#if !hideStart && !afterFinish}}
+         {#if !hideStart && !afterFinish}
 			<img src={loadingGif} alt="loading gif"/>
          {/if}
 		{:then data}
