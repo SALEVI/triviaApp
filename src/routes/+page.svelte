@@ -310,9 +310,13 @@
      background: transparent;
      box-shadow: none;
    }
-   .wrapper {
-      justify-content: flex-end;
-      padding: 70vh 0.1em 30vh 0.1em;
+
+   .fade-wrapper{
+      left: auto;
+      right: auto;
+      top: auto;
+      bottom: auto;
+      scale: 80%;
    }
 }
 
