@@ -46,7 +46,7 @@
 </script>
 
 <div class="form-control w-full max-w-xs">
-		<label class="label">
+		<label class="label" for="category">
 		  <span class="label-text">Select Category</span>
 		</label>
 		<select

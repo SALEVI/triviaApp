@@ -25,7 +25,7 @@
 </script>
 
 <div class="form-control w-full max-w-xs">
-		<label class="label">
+		<label class="label" for="difficulty">
 		  <span class="label-text">Select Difficulty</span>
 		</label>
 		<select class="select select-primary w-full max-w-xs" bind:value={selected} on:change={getDifficulty}>

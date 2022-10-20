@@ -90,20 +90,20 @@
 {#if isAnswered}
 <div class="answer">
 	{#if isCorrect}
-	<div class="alert alert-success shadow-lg lg:text-lg sm:text-sm Ans">
+	<div class="alert alert-success shadow-lg lg:text-lg sm:text-sm Ans" in:fly={{x:-100}}>
 		<div class="fix">
 		  <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
 		  <span>Correct!</span>
 		</div>
 	 </div>
 	{:else}
-	<div class="alert alert-error shadow-lg lg:text-lg sm:text-sm Ans">
+	<div class="alert alert-error shadow-lg lg:text-lg sm:text-sm Ans" in:fly={{x:-100}}>
 		<div class="fix">
 		  <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
 		  <span>Incorrect</span>
 		</div>
 	 </div>
-	<div class="alert alert-success shadow-lg lg:text-lg sm:text-sm correctAns">
+	<div class="alert alert-success shadow-lg lg:text-lg sm:text-sm correctAns" in:fly={{x:100}}>
 		<div class="fix">
 		  <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
 		  <span>
@@ -121,7 +121,7 @@
 
 <div class="grid grid-cols-2 gap-8 text-center justify-evenly">
 	{#each allAnswers as answer, index}
-		<button id={index} class="btn lg:btn-lg sm:btn-sm box btnSelector" on:click={isAnswered? '' : () => checkQuestion(answer.correct)} > 
+		<button id={index} class="btn lg:btn-lg sm:btn-sm box btnSelector btn" on:click={isAnswered? '' : () => checkQuestion(answer.correct)}> 
 			{@html answer.answer}
 	</button>
 	{/each}
@@ -129,7 +129,7 @@
 
 {#if isAnswered}
 	<div class="space">
-		<button class="btn btn-active btn-primary btn-block transition:fade" on:click={nextQuestion}>Next Question</button>
+		<button class="btn btn-active btn-primary btn-block" in:fly={{y:30}} on:click={nextQuestion}>Next Question</button>
 	</div>
 {/if}
 
