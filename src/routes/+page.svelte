@@ -153,8 +153,10 @@
           </div>
           <div class="font-title mb-2 font-medium text-lg footerText">Made with</div>
          <span class="footer flex flex-row justify-center items-center">
+         <a href="https://opentdb.com/">
          <img class="w-28 h-28 opendtdb" src={OpendbLogo} alt="opendtdb logo" />
-         <span class="font-title mb-2 text-4xl font-extrabold sm:text-3xl lg:text-4xl">daisyUI</span>
+         </a>
+         <span class="font-title mb-2 text-4xl font-extrabold sm:text-3xl lg:text-4xl"><a href="https://daisyui.com/">daisyUI</a></span>
       </span>
       </div>
    {/if}
