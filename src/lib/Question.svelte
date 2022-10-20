@@ -156,7 +156,9 @@
 		float: right;
 	}
 	section {
-		max-width: 80vw;
+		max-width: 90vw;
+		max-height: 100vh;
+		overflow: scroll;
 	}
 	progress {
 		width: 100%;
