@@ -153,8 +153,8 @@
           </div>
           <div class="font-title mb-2 font-medium text-lg footerText">Made with</div>
          <span class="footer flex flex-row justify-center items-center">
-         <img class="w-32 h-32 opendtdb" src={OpendbLogo} alt="opendtdb logo" />
-         <span class="font-title mb-2 text-4xl font-extrabold sm:text-4xl lg:text-4xl">daisyUI</span>
+         <img class="w-28 h-28 opendtdb" src={OpendbLogo} alt="opendtdb logo" />
+         <span class="font-title mb-2 text-4xl font-extrabold sm:text-3xl lg:text-4xl">daisyUI</span>
       </span>
       </div>
    {/if}

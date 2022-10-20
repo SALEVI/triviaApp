@@ -209,5 +209,9 @@
 	.div-answers {
 		gap: .5em;
 	}
+
+	.answer {
+		gap: .5em;
+	}
 } 
 </style>
