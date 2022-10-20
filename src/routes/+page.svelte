@@ -5,6 +5,7 @@
    import goodGif from '$lib/images/good.gif';
    import OpendbLogo from '$lib/images/opendblogo.png';
    import poorGif from '$lib/images/poor.gif';
+   import loadingGif from '$lib/images/puff.svg';
    import Options from '$lib/Options/Options.svelte';
    import Question from '$lib/Question.svelte';
    import { fade, fly } from 'svelte/transition';
@@ -90,7 +91,7 @@
 	{#if (showQuiz = true)}
 		{#await quiz}
          {#if !hideStart}
-			<img src="src\lib\images\puff.svg" alt="loading gif"/>
+			<img src={loadingGif} alt="loading gif"/>
          {/if}
 		{:then data}
 			{#each data.results as question, index}
