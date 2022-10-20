@@ -18,6 +18,7 @@
 	let activeQuestion = 0;
 	let quiz = getQuiz();
 	let active = false;
+   let afterFinish = false;
    let numberOfQuestions;
 	$: hideStart = true;
 	$: showQuiz = false;
@@ -84,7 +85,7 @@
 
 	{#if (showQuiz = true)}
 		{#await quiz}
-         {#if !hideStart}
+         {#if !hideStart && !afterFinish}}
 			<img src={loadingGif} alt="loading gif"/>
          {/if}
 		{:then data}
@@ -147,7 +148,7 @@
             </div>     
             
             <div class="stat endButtons">
-                  <button class="btn btn-active btn-primary btn-sm" on:click={() => window.location.reload()}>Options</button>
+                  <button class="btn btn-active btn-primary btn-sm" on:click={(afterFinish = true)} on:click={() => window.location.reload()}>Options</button>
                   <button class="btn btn-active btn-primary btn-sm" on:click={ startQuiz}>Restart</button>
             </div>  
           </div>
