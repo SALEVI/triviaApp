@@ -173,6 +173,7 @@
    section {
       background-image: url("../lib/images/bg.png");
       background-size: cover;
+      overflow: hidden;
    } 
    .options {
       backdrop-filter: blur(10px);
