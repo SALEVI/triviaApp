@@ -315,7 +315,7 @@
    .fade-wrapper{
       left: auto;
       right: auto;
-      top: 10%;
+      top: 8%;
       bottom: auto;
       width: auto;
       height: auto;
