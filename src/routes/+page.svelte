@@ -68,12 +68,6 @@
       <div class="options">
 		   <Options on:createdData={handleCreator} on:hideOptions={handleOptions} />
       </div>
-
-      <div class="font-title mb-2 font-medium text-lg footerText">Made with</div>
-      <span class="footer flex flex-row justify-center items-center">
-         <img class="w-32 h-32 opendtdb" src={OpendbLogo} alt="opendtdb logo" />
-         <span class="font-title mb-2 text-4xl font-extrabold sm:text-4xl lg:text-4xl">daisyUI</span>
-      </span>
 	{/if}
 
 	{#if !hideStart}
@@ -157,6 +151,11 @@
                   <button class="btn btn-active btn-primary btn-sm" on:click={ startQuiz}>Restart</button>
             </div>  
           </div>
+          <div class="font-title mb-2 font-medium text-lg footerText">Made with</div>
+         <span class="footer flex flex-row justify-center items-center">
+         <img class="w-32 h-32 opendtdb" src={OpendbLogo} alt="opendtdb logo" />
+         <span class="font-title mb-2 text-4xl font-extrabold sm:text-4xl lg:text-4xl">daisyUI</span>
+      </span>
       </div>
    {/if}
 </div>
@@ -166,6 +165,8 @@
    .footerText {
       margin-top: 2em;
       margin-bottom: .5em;
+      margin-left: auto;
+      margin-right: auto;
    }
    .footer {
       gap: 2em;
