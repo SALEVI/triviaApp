@@ -64,11 +64,11 @@
 <section class="wrapper">
 
 	<div class="stat">
-      <div class="stat-title">Question</div>
+      <div class="stat-title forQuestion">Question</div>
       <div class="stat-value text-secondary">{questionNumber}</div>
    </div>
-   <div class="stat score">
-      <div class="stat-title">Score</div>
+   <div class="stat score"> 
+      <div class="stat-title forScore">Score</div>
       <div class="stat-value text-primary">{score}</div>
    </div>
 	<div class="moveme">
@@ -119,9 +119,9 @@
 </div>
 {/if}
 
-<div class="grid grid-cols-2 gap-8 text-center justify-evenly">
+<div class="grid grid-cols-2 gap-8 text-center justify-evenly div-answers">
 	{#each allAnswers as answer, index}
-		<button id={index} class="btn lg:btn-lg sm:btn-sm box btnSelector btn" on:click={isAnswered? '' : () => checkQuestion(answer.correct)}> 
+		<button id={index} class="btn lg:btn-lg sm:btn-sm box btnSelector btn-answers" on:click={isAnswered? '' : () => checkQuestion(answer.correct)}> 
 			{@html answer.answer}
 	</button>
 	{/each}
@@ -135,6 +135,9 @@
 
 </section>
 <style>
+/* 	.btn-answers {
+		width: fit-content;
+	} */
 	.fix {
 		margin-top:auto;
 		margin-bottom: auto;
@@ -187,4 +190,24 @@
 		text-align: right;
 		float: right;
 	}
+
+	@media only screen and (max-width: 465px){
+   .wrapper {
+		padding: 0;
+	}
+	.forQuestion {
+		color: hsl(var(--s));
+	}
+	.forScore {
+		color: hsl(var(--p));
+	}
+	.btn-answers {
+  		white-space: wrap;
+  		overflow:hidden;
+  		text-overflow:ellipsis;
+	}
+	.div-answers {
+		gap: .5em;
+	}
+} 
 </style>
