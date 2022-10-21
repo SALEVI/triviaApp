@@ -1,3 +1,7 @@
+<!-- 
+      - make README
+-->
+
 <script>
    import badGif from '$lib/images/bad.gif';
    import excelentGif from '$lib/images/excelent.gif';
@@ -6,6 +10,7 @@
    import OpendbLogo from '$lib/images/opendblogo.png';
    import poorGif from '$lib/images/poor.gif';
    import loadingGif from '$lib/images/puff.svg';
+   import svelteLogo from '$lib/images/svelte.svg';
    import Options from '$lib/Options/Options.svelte';
    import Question from '$lib/Question.svelte';
    import { fade, fly } from 'svelte/transition';
@@ -151,10 +156,13 @@
                   <button class="btn btn-active btn-primary btn-sm" on:click={ startQuiz}>Restart</button>
             </div>  
           </div>
-          <div class="font-title mb-2 font-medium text-lg footerText">Made with</div>
+          <div class="font-title mb-2 font-medium text-lg footerText">Built with</div>
          <span class="footer flex flex-row justify-center items-center">
          <a href="https://opentdb.com/">
-         <img class="w-28 h-28 opendtdb" src={OpendbLogo} alt="opendtdb logo" />
+         <img class="w-28 h-28 opendb" src={OpendbLogo} alt="opendb logo" />
+         </a>
+         <a href="https://kit.svelte.dev/">
+            <img class="w-12 h-12" src="{svelteLogo}" alt="Svelte logo">
          </a>
          <span class="font-title mb-2 text-4xl font-extrabold sm:text-3xl lg:text-4xl"><a href="https://daisyui.com/">daisyUI</a></span>
       </span>
@@ -168,8 +176,8 @@
       position: absolute;
    }
    .footerText {
-      margin-top: 2em;
-      margin-bottom: .5em;
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
       margin-left: auto;
       margin-right: auto;
    }
@@ -328,6 +336,11 @@
 
    .wrapper {
       overflow: auto;
+   }
+
+   .footerText {
+      margin-top: 1em;
+      margin-bottom: 1em;
    }
 }
 
