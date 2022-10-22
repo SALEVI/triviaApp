@@ -202,7 +202,7 @@
 		color: #fff;
 	}
 	.forScore {
-		color: #fff
+		color: #fff;
 	}
 	.btn-answers {
   		white-space: wrap;
