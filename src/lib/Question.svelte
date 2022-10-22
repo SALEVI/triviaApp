@@ -199,10 +199,10 @@
 		padding: 0;
 	}
 	.forQuestion {
-		color: hsl(var(--s));
+		color: #fff;
 	}
 	.forScore {
-		color: hsl(var(--p));
+		color: #fff
 	}
 	.btn-answers {
   		white-space: wrap;

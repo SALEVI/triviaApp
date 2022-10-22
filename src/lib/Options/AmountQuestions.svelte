@@ -20,3 +20,9 @@
 	</label>
 	<input type="number" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs" bind:value={selected} min="1" max="50" on:change={getNumber} />
  </div>
+
+ <style>
+	.label-text {
+		color: #fff;
+	}
+</style>

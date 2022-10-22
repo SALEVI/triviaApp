@@ -35,3 +35,9 @@
 		{/each}
 	</select>
 </div>
+
+<style>
+	.label-text {
+		color: #fff;
+	}
+</style>
