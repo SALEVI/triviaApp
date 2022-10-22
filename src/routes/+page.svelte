@@ -21,7 +21,7 @@
 	let hideOptions = false;
 	let score = 0;
 	let activeQuestion = 0;
-	let quiz;
+	let quiz = getQuiz();
 	let active = false;
    let numberOfQuestions;
 	$: hideStart = true;
@@ -191,14 +191,19 @@
    .footer {
       gap: 2em;
    }
-   .no-webp section {
+  /*  .no-webp section {
       background-image: url("../lib/images/bg.png");
       background-size: cover;
    }
    .webp section {
       background-image: url("../lib/images/bg.webp");
       background-size: cover;
-   } 
+   }  */
+
+   section {
+      background-image: url("../lib/images/bg.png");
+      background-size: cover;
+   }
    .options {
       backdrop-filter: blur(10px);
       padding: 2em;
