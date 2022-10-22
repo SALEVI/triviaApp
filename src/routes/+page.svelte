@@ -26,6 +26,7 @@
    let numberOfQuestions;
 	$: hideStart = true;
 	$: showQuiz = false;
+   $: curentWidth = 0;
 
 	function handleCreator(event) {
 		apiData = event.detail.data;
@@ -66,7 +67,7 @@
 
 </script>
 
-<section>
+<section bind:clientWidth={curentWidth}>
 <div class="wrapper">
 	{#if !hideOptions}
       <h1>TRIVIA</h1>
@@ -95,10 +96,15 @@
 		{:then data}
 			{#each data.results as question, index}
 				{#if index === activeQuestion}
-               <!-- in:fly={{x:100}} out:fly={{x:-100}} -->
-					<div transition:fade class="fade-wrapper">
-						<Question {addToScore} {nextQuestion} {question} {score} {questionNumber} {numberOfQuestions}/>
-					</div>
+               {#if (curentWidth > 765)}
+					   <div in:fly={{x:100}} out:fly={{x:-100}} class="fade-wrapper">
+						   <Question {addToScore} {nextQuestion} {question} {score} {questionNumber} {numberOfQuestions}/>
+                  </div>
+               {:else} 
+                  <div transition:fade class="fade-wrapper">
+						   <Question {addToScore} {nextQuestion} {question} {score} {questionNumber} {numberOfQuestions}/>
+                  </div>
+               {/if}
 				{/if}
 			{/each}
 		{/await}
