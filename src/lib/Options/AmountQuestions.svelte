@@ -25,4 +25,7 @@
 	.label-text {
 		color: #fff;
 	}
+	.label-text-alt {
+		color: #fff;
+	}
 </style>
