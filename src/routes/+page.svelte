@@ -21,7 +21,7 @@
 	let hideOptions = false;
 	let score = 0;
 	let activeQuestion = 0;
-	let quiz = getQuiz();
+	let quiz;
 	let active = false;
    let numberOfQuestions;
 	$: hideStart = true;
@@ -191,8 +191,12 @@
    .footer {
       gap: 2em;
    }
-   section {
+   .no-webp section {
       background-image: url("../lib/images/bg.png");
+      background-size: cover;
+   }
+   .webp section {
+      background-image: url("../lib/images/bg.webp");
       background-size: cover;
    } 
    .options {
