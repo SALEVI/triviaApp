@@ -1,5 +1,7 @@
-# TRIVIA
+<h2 align=center> TRIVIA</h2>
 
-*A trivia game built with **Svelte**, **DaisyUI** and **Open Trivia Database***
+<p align=center>A trivia game built with <b>Svelte</b>, <b>DaisyUI</b> and <b>Open Trivia Database</b></p>
 
-#### link to try it out: 	[TRIVIA](https://clinquant-meringue-c8fb11.netlify.app/)
+<div align=center><img width="700" height="684" src="TriviaGameCompilation.png"></div>
+
+<h4 align=center>Try it out clicking this ➡️ <a href="https://clinquant-meringue-c8fb11.netlify.app/"><b>TRIVIA</b></a> </h4>
